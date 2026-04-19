@@ -42,7 +42,13 @@ public class Veiculo {
         this.velocidade -= 10;
         if (this.velocidade < 0) this.velocidade = 0;
     }
-
-   
+    
+    public void exibirStatus() {
+        System.out.println("Status: " + marca + " " + modelo + " - Vel: " + velocidade);
+    }
+    
+    public void ligar() {
+        System.out.println("Veículo ligado.");
+    }
 }
    
