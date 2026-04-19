@@ -18,7 +18,16 @@ public class Carro extends Veiculo {
      public void ligar(String modo) {
         System.out.println("Carro ligado no modo: " + modo);
     }
-
+     
+    @Override
+    public double calcularConsumo() {
+        return 12.5;
+    }
+    
+     @Override
+    public String toString() {
+        return "Carro: " + getMarca() + " " + getModelo() + " - Velocidade: " + getVelocidade() + " km/h";
+    }
 
 }
     

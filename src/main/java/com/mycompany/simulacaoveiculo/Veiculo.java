@@ -3,7 +3,7 @@ public class Veiculo {
     private String marca;
     private String modelo;
     private int velocidade;
-    
+    private String placa;
 
     public Veiculo(String marca, String modelo) {
         this.marca = marca;
@@ -29,6 +29,10 @@ public class Veiculo {
         return velocidade; }
     public void setVelocidade(int velocidade) { 
         this.velocidade = velocidade; }
+    public String getPlaca() { 
+        return placa; }
+    public void setPlaca(String placa) { 
+        this.placa = placa; }
     
     public void acelerar() {
         this.velocidade += 10;
@@ -49,6 +53,27 @@ public class Veiculo {
     
     public void ligar() {
         System.out.println("Veículo ligado.");
+    }
+    
+    public void interagir(Veiculo outro) {
+        System.out.println("Interação genérica entre veículos.");
+    }
+
+    public double calcularConsumo() {
+        return 0.0;
+    }
+   
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Veiculo veiculo = (Veiculo) o;
+        return placa != null && placa.equals(veiculo.placa);
+    }
+
+    @Override
+    public int hashCode() {
+        return placa != null ? placa.hashCode() : 0;
     }
 }
    

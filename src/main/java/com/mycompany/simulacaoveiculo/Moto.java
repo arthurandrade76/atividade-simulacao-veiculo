@@ -19,4 +19,10 @@ public class Moto extends Veiculo {
      public void ligar(String modo) {
         System.out.println("Moto ligada no modo: " + modo);
     }
+     
+    @Override
+    public double calcularConsumo() {
+        return 35.0;
+    }
+
 }
