@@ -29,6 +29,20 @@ public class Veiculo {
         return velocidade; }
     public void setVelocidade(int velocidade) { 
         this.velocidade = velocidade; }
+    
+    public void acelerar() {
+        this.velocidade += 10;
+    }
+
+    public void acelerar(int incremento) {
+        this.velocidade += incremento;
+    }
+
+    public void frear() {
+        this.velocidade -= 10;
+        if (this.velocidade < 0) this.velocidade = 0;
+    }
+
    
 }
    
